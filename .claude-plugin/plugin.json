@@ -1,0 +1,19 @@
+{
+  "name": "orchestra",
+  "version": "0.1.0",
+  "description": "Pick the model each kind of task runs on (Claude, Codex, Cursor, Gemini), dispatch it from a pane, and manage your sign-ins",
+  "author": { "name": "octavi42", "url": "https://github.com/octavi42" },
+  "homepage": "https://github.com/octavi42/orchestra",
+  "repository": "https://github.com/octavi42/orchestra",
+  "license": "MIT",
+  "keywords": ["orchestration", "routing", "codex", "cursor", "gemini", "multi-model"],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "fableModel": { "type": "string", "title": "Planning model (Claude)", "description": "Claude model id the 'Fable' choice runs on", "default": "claude-fable-5-1" },
+    "opusModel": { "type": "string", "title": "Implementation model (Claude)", "description": "Claude model id the 'Opus' choice runs on", "default": "claude-opus-5-5" },
+    "codexModel": { "type": "string", "title": "Codex model", "description": "Model passed to codex exec -m", "default": "gpt-6-astra" },
+    "cursorModel": { "type": "string", "title": "Cursor model", "description": "Model passed to cursor-agent --model", "default": "composer-2.5" },
+    "guard": { "type": "boolean", "title": "Model guard", "description": "Rewrite Haiku, Sonnet and older Opus subagents to the implementation model", "default": false },
+    "shareRouting": { "type": "boolean", "title": "Share routing with Claude", "description": "Add your task-to-model table to the conversation so Claude follows it when it delegates", "default": true }
+  }
+}

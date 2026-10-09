@@ -1,0 +1,13 @@
+{
+  "name": "orchestra",
+  "owner": { "name": "octavi42", "url": "https://github.com/octavi42" },
+  "metadata": { "description": "Orchestra: per-task model routing for Claude Code" },
+  "plugins": [
+    {
+      "name": "orchestra",
+      "source": "./",
+      "description": "Pick the model each kind of task runs on (Claude, Codex, Cursor, Gemini), dispatch it from a pane, and manage your sign-ins",
+      "version": "0.1.0"
+    }
+  ]
+}
